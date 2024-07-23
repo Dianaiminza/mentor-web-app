@@ -13,6 +13,9 @@
     "@formkit/auto-animate": "^0.8.2",
     "@nuxtjs/tailwindcss": "^6.12.1",
     "@radix-icons/vue": "^1.0.0",
+    "@vee-validate/nuxt": "^4.13.2",
+    "@vee-validate/zod": "^4.13.2",
+    "@vueuse/core": "^10.11.0",
     "class-variance-authority": "^0.7.0",
     "clsx": "^2.1.1",
     "nuxt": "^3.12.4",
@@ -21,6 +24,8 @@
     "tailwind-merge": "^2.4.0",
     "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.5.3",
-    "vue": "latest"
+    "vee-validate": "^4.13.2",
+    "vue": "latest",
+    "zod": "^3.23.8"
   }
 }
