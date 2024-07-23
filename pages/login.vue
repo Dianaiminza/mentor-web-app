@@ -22,21 +22,43 @@ definePageMeta({
 })
 
 const formSchema = toTypedSchema(z.object({
-  username: z.string().min(3).max(50),
+  email: z.string().min(3).max(50),
   password: z.string().min(5, { message: 'Password must be at least 5 characters' }).max(20, { message: 'Password must not exceed 20 characters' }),
 
 
 }))
+import { storeToRefs } from 'pinia'; 
+import { useAuthStore } from '../stores/auth';
 
+const { signIn } = useAuthStore();
+const { authenticated } = storeToRefs(useAuthStore());
+const user = ref({
+  email: '', 
+  password: '',
+});
+const router = useRouter();
+const login = async () => {
+  await signIn(user.value); 
+  // redirect to homepage if user is authenticated
+  if (authenticated) {
+    router.push('/');
+  }
+};
 const { handleSubmit } = useForm({
   validationSchema: formSchema,
 })
 
 const onSubmit = handleSubmit((values) => {
-  toast({
-    title: 'You submitted the following values:',
-    description: h('pre', { class: 'mt-1 w-[340px] rounded-md bg-white-950 p-4' }, h('code', { class: 'text-white' }, JSON.stringify(values, null, 2))),
-  })
+
+ // toast({
+   // title: 'You submitted the following values:',
+  //  description: h('pre', { class: 'mt-1 w-[340px] rounded-md bg-white-950 p-4' }, h('code', { class: 'text-white' }, JSON.stringify(values, null, 2))),
+  //})
+   signIn(values); 
+  // redirect to homepage if user is authenticated
+  if (authenticated) {
+    router.push('/');
+  }
 })
 </script>
 
@@ -45,7 +67,7 @@ const onSubmit = handleSubmit((values) => {
 
   <div class="md:w-1/4  p-4" style="background-color:aliceblue;">
     <form class="" @submit="onSubmit">
-    <FormField v-slot="{ componentField }" name="username">
+    <FormField v-slot="{ componentField }" name="email">
       <FormItem v-auto-animate>
         <FormLabel>Enter your email or username</FormLabel>
         <FormControl>

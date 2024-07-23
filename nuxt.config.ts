@@ -13,7 +13,8 @@ export default defineNuxtConfig({
     '@formkit/auto-animate/nuxt',
     '@vee-validate/nuxt',
     '@nuxt/icon',
-    '@nuxt/image'
+    '@nuxt/image',
+    '@pinia/nuxt'
   ],
   shadcn: {
     /**
@@ -30,6 +31,10 @@ export default defineNuxtConfig({
     // Options
     inject: true
 
-  }
+  },
+   pinia: {
+    storesDirs: ['./stores/**'],
+  },
   
 })
+
