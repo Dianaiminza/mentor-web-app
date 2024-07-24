@@ -32,6 +32,16 @@ export default defineNuxtConfig({
     inject: true
 
   },
+  app: {
+    head: {
+      title: "HerTechQuest",
+      link: [
+        { rel: "icon", type: "image/x-icon", href: "/hertechquestlogo.jpg" },
+        { rel: "stylesheet", href: "https://rsms.me/inter/inter.css" },
+        { rel: "preconnect", href: "https://rsms.me/" },
+      ],
+    },
+  },
    pinia: {
     storesDirs: ['./stores/**'],
   },
