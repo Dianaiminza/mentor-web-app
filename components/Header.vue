@@ -3,14 +3,12 @@
 <div class="py-5">
 <div class="container">
   <div class="flex justify-between items-center">
-    <img src="/logo.svg" alt="" class="h-10 w-10 object-contain"/>
+    <img src="/hertechquestlogo.jpg" alt="" class="h-12 w-12 object-contain"/>
     <Icon name="icomoon-free:menu" style="color: black; height: 30; width: 30;" class="md:hidden"/>
     <nav class="hidden md:flex gap-5 items-center text-black/100">
-      <a> Hello world</a>
-      <a> Hello world</a>
-      <a> Hello world</a>
-      <a> Hello world </a>
-      <a> Hello world</a>
+      <a> Community</a>
+      <a> Discussions</a>
+      <a> About us</a>
 <button class="bg-black text-white px-5 py-2 rounded-sm font-mono inline-flex align-middle justify-center tracking-tighter">
   <NuxtLink to="/login">
     Get Started

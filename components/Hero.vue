@@ -16,7 +16,7 @@
         </div>
       </div>
       <div class="mt-10">
-        <img src="/sample.jpg" alt="" class=""/>
+        <img src="/hertechquest1.jpg" alt="" class=" md:w-[455rem]"/>
 
       </div>
     </div>
