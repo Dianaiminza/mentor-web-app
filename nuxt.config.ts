@@ -7,7 +7,15 @@ export default defineNuxtConfig({
       exclude: ['vee-validate']
     }
   },
-  modules: ['@nuxtjs/tailwindcss', 'shadcn-nuxt','@formkit/auto-animate/nuxt','@vee-validate/nuxt'],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    'shadcn-nuxt',
+    '@formkit/auto-animate/nuxt',
+    '@vee-validate/nuxt',
+    '@nuxt/icon',
+    '@nuxt/image',
+    '@pinia/nuxt'
+  ],
   shadcn: {
     /**
      * Prefix for all the imported component
@@ -18,6 +26,15 @@ export default defineNuxtConfig({
      * @default "./components/ui"
      */
     componentDir: './components/ui'
-  }
+  },
+  image: {
+    // Options
+    inject: true
+
+  },
+   pinia: {
+    storesDirs: ['./stores/**'],
+  },
+  
 })
 
