@@ -3,7 +3,7 @@
 <div class="py-5">
 <div class="container">
   <div class="flex justify-between items-center">
-    <img src="/logo.svg" alt="" class="h-10 w-10 object-contain"/>
+    <img src="/hertechquestlogo.jpg" alt="" class="h-16 w-16 object-contain"/>
     <Icon name="icomoon-free:menu" style="color: black; height: 30; width: 30;" class="md:hidden"/>
     <nav class="hidden md:flex gap-5 items-center text-black/100">
       <a> Hello world</a>

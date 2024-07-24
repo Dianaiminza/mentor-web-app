@@ -2,6 +2,7 @@
   <div>
     <Header/>
     <Hero/>
+    <Testimonials/>
     <slot />
   </div>
 </template>

@@ -86,4 +86,13 @@
   .btn-text {
     @apply text-black bg-transparent
   }
+  .tag {
+    @apply text-sm inline-flex border border-[#222]/10 px-3 py-1 rounded-xl tracking-tighter bg-black text-slate-50;
+  }
+  .section-title{
+    @apply text-center text-3xl md:text-[55px] md:leading-[60px] font-bold tracking-tighter bg-gradient-to-b from-black to-[#001E81] text-transparent bg-clip-text;
+  }
+  .card {
+    @apply p-10 border  border-[#222222]/10 rounded-2xl shadow-[0_7px_14px_#EAEAEA];
+  }
 }
